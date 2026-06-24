@@ -1,0 +1,16 @@
+<li class="post-item">
+  <div class="post-meta">
+    <time datetime="{{ include.post.date | date_to_xmlschema }}">{% include date-fr.html date=include.post.date %}</time>
+    <span class="dot" aria-hidden="true"></span>
+    <span class="rt">{% include reading-time.html content=include.post.content %} de lecture</span>
+  </div>
+  <h2><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h2>
+  <p class="post-excerpt">{{ include.post.description | default: include.post.excerpt | strip_html | truncate: 220 }}</p>
+  {% if include.post.tags.size > 0 %}
+  <ul class="tags">
+    {% for tag in include.post.tags %}
+    <li><a class="tag" href="{{ '/' | relative_url }}">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</li>

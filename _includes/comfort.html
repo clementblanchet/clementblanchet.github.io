@@ -1,0 +1,56 @@
+<div class="comfort-overlay" id="comfort-overlay"></div>
+<aside class="comfort-panel" id="comfort-panel" role="dialog" aria-modal="false" aria-labelledby="comfort-title" hidden>
+  <header>
+    <h2 id="comfort-title">Confort de lecture</h2>
+    <button class="comfort-close" id="comfort-close" aria-label="Fermer le panneau">×</button>
+  </header>
+  <div class="comfort-body">
+
+    <div class="cf-group">
+      <span class="cf-label" id="cf-size-lbl">Taille du texte</span>
+      <div class="seg" role="group" aria-labelledby="cf-size-lbl" data-setting="size">
+        <button type="button" data-value="s" aria-pressed="false">A−</button>
+        <button type="button" data-value="m" aria-pressed="true">A</button>
+        <button type="button" data-value="l" aria-pressed="false">A+</button>
+        <button type="button" data-value="xl" aria-pressed="false">A++</button>
+      </div>
+    </div>
+
+    <div class="cf-group">
+      <span class="cf-label" id="cf-lead-lbl">Interligne</span>
+      <div class="seg" role="group" aria-labelledby="cf-lead-lbl" data-setting="leading">
+        <button type="button" data-value="compact" aria-pressed="false">Compact</button>
+        <button type="button" data-value="normal" aria-pressed="true">Normal</button>
+        <button type="button" data-value="airy" aria-pressed="false">Aéré</button>
+      </div>
+    </div>
+
+    <div class="cf-group">
+      <span class="cf-label" id="cf-width-lbl">Largeur de lecture</span>
+      <div class="seg" role="group" aria-labelledby="cf-width-lbl" data-setting="width">
+        <button type="button" data-value="narrow" aria-pressed="true">Étroite</button>
+        <button type="button" data-value="wide" aria-pressed="false">Large</button>
+      </div>
+    </div>
+
+    <div class="cf-group">
+      <span class="cf-label" id="cf-font-lbl">Police</span>
+      <div class="seg" role="group" aria-labelledby="cf-font-lbl" data-setting="font">
+        <button type="button" data-value="lexend" aria-pressed="true">Lexend</button>
+        <button type="button" data-value="system" aria-pressed="false">Système</button>
+      </div>
+    </div>
+
+    <button type="button" class="cf-toggle" id="cf-dyslexia" data-setting="dyslexia" aria-pressed="false">
+      <span class="tlabel">
+        <b>Espacement dyslexie</b>
+        <small>Lettres et mots plus espacés</small>
+      </span>
+      <span class="switch" aria-hidden="true"></span>
+    </button>
+
+    <p class="cf-note">Lexend est associée à une lecture plus rapide chez les lecteurs lents ; le gain documenté tient surtout à l'espacement, que vous pouvez renforcer ci-dessus. Vos réglages sont mémorisés sur cet appareil.</p>
+
+    <button type="button" class="cf-reset" id="cf-reset">Tout réinitialiser</button>
+  </div>
+</aside>

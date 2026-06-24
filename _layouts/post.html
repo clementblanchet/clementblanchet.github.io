@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<article class="wrap">
+  <div class="article-header">
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{% include date-fr.html date=page.date %}</time>
+      <span class="dot" aria-hidden="true"></span>
+      <span class="rt">{% include reading-time.html content=content %} de lecture</span>
+    </div>
+    <h1>{{ page.title }}</h1>
+    <p class="byline">Par {{ page.author | default: site.author.name }}</p>
+  </div>
+
+  {% if page.image %}
+  <figure class="lead-figure">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: '' }}">
+  </figure>
+  {% endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <footer class="article-footer">
+    {% if page.tags.size > 0 %}
+    <ul class="tags">
+      {% for tag in page.tags %}
+      <li><a class="tag" href="{{ '/' | relative_url }}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <nav class="prevnext" aria-label="Navigation entre articles">
+      {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}" class="prev">
+        <span class="dir">← Précédent</span>
+        <span class="ttl">{{ page.previous.title }}</span>
+      </a>
+      {% else %}<span></span>{% endif %}
+
+      {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}" class="next">
+        <span class="dir">Suivant →</span>
+        <span class="ttl">{{ page.next.title }}</span>
+      </a>
+      {% else %}<span></span>{% endif %}
+    </nav>
+  </footer>
+</article>

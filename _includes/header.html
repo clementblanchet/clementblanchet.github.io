@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}, accueil">
+      <img class="mark" src="{{ '/assets/favicons/neurone.svg' | relative_url }}" alt="" width="28" height="28">
+      <b>{{ site.title }}</b>
+    </a>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Articles</a>
+      <a href="{{ '/a-propos/' | relative_url }}"{% if page.url contains 'propos' %} aria-current="page"{% endif %}>À propos</a>
+    </nav>
+
+    <button class="comfort-btn" id="comfort-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="comfort-panel">
+      <span class="gi" aria-hidden="true">A<small>A</small></span>
+      <span class="label">Confort de lecture</span>
+    </button>
+  </div>
+</header>

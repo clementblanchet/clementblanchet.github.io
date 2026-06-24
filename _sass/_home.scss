@@ -1,0 +1,64 @@
+.intro { margin-bottom: 2.8rem; }
+.intro h1 {
+  font-size: clamp(1.9rem, 1.3rem + 2.4vw, 2.7rem);
+  font-weight: 700; margin-bottom: .5rem;
+}
+.intro p {
+  color: var(--meta); font-size: 1.08rem; max-width: 34rem;
+  margin-bottom: 0;
+}
+
+.section-label {
+  font-size: .8rem; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--meta);
+  margin-bottom: 1.4rem;
+}
+
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-item { padding-block: 1.7rem; border-top: 1px solid var(--rule); }
+.post-item:first-child { border-top: none; padding-top: 0; }
+
+.post-meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .9rem;
+  color: var(--meta); font-size: .86rem; margin-bottom: .55rem;
+}
+.post-meta time { font-variant-numeric: tabular-nums; }
+.post-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--base1); }
+.post-meta .rt { display: inline-flex; gap: .3rem; }
+
+.post-item h2 { font-size: 1.5rem; margin-bottom: .45rem; }
+.post-item h2 a { color: var(--heading); text-decoration: none; }
+.post-item h2 a:hover { color: var(--accent); }
+.post-excerpt { margin: 0 0 .8rem; color: var(--text); max-width: 40rem; }
+
+.tags { display: flex; flex-wrap: wrap; gap: .45rem; list-style: none; margin: 0; padding: 0; }
+.tag {
+  font-size: .8rem; color: var(--meta); text-decoration: none;
+  padding: .2rem .55rem; border-radius: 999px;
+  border: 1px solid var(--rule-strong);
+}
+.tag:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+
+.pagination {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; margin-top: 2.6rem; padding-top: 1.6rem;
+  border-top: 1px solid var(--rule);
+}
+.pagination .pages { display: flex; gap: .3rem; align-items: center; }
+.pagination .pages a, .pagination .pages span {
+  min-width: 2.4rem; min-height: 2.4rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0 .5rem; border-radius: 8px; text-decoration: none;
+  color: var(--text); font-variant-numeric: tabular-nums; font-size: .95rem;
+}
+.pagination .pages a:hover { background: var(--accent-soft); color: var(--accent); }
+.pagination .pages [aria-current="page"] {
+  background: var(--accent); color: var(--base3); font-weight: 600;
+}
+.pg-nav {
+  display: inline-flex; align-items: center; gap: .4rem;
+  text-decoration: none; color: var(--accent); font-weight: 500;
+  padding: .5rem .7rem; border-radius: 8px; min-height: 2.4rem;
+}
+.pg-nav:hover { background: var(--accent-soft); }
+.pg-nav[aria-disabled="true"] { color: var(--base1); pointer-events: none; }

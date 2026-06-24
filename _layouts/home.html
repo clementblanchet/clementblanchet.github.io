@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="wrap">
+  <div class="intro">
+    <h1>{{ site.tagline }}</h1>
+    <p>{{ site.description }}</p>
+  </div>
+
+  <p class="section-label">Derniers articles</p>
+
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+  </ul>
+
+  {% include pagination.html %}
+</div>

@@ -1,0 +1,61 @@
+.comfort-overlay {
+  position: fixed; inset: 0; background: rgba(0,43,54,.28);
+  opacity: 0; pointer-events: none; transition: opacity .2s ease; z-index: 40;
+}
+.comfort-overlay.open { opacity: 1; pointer-events: auto; }
+.comfort-panel {
+  position: fixed; top: 0; right: 0; height: 100%; width: min(360px, 92vw);
+  background: var(--bg); border-left: 1px solid var(--rule-strong);
+  box-shadow: -16px 0 40px rgba(0,43,54,.12);
+  transform: translateX(100%); transition: transform .25s ease;
+  z-index: 41; display: flex; flex-direction: column;
+  overflow-y: auto;
+}
+.comfort-panel.open { transform: translateX(0); }
+.comfort-panel header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 1.3rem; border-bottom: 1px solid var(--rule); position: sticky; top: 0; background: var(--bg);
+}
+.comfort-panel header h2 { font-size: 1.1rem; }
+.comfort-close {
+  font: inherit; cursor: pointer; background: transparent; border: none;
+  color: var(--text); width: 2.2rem; height: 2.2rem; border-radius: 7px;
+  font-size: 1.3rem; line-height: 1; display: inline-flex; align-items: center; justify-content: center;
+}
+.comfort-close:hover { background: var(--accent-soft); color: var(--accent); }
+.comfort-body { padding: 1.3rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.cf-group > .cf-label {
+  display: block; font-size: .82rem; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--meta); margin-bottom: .6rem;
+}
+.seg { display: flex; gap: .35rem; flex-wrap: wrap; }
+.seg button {
+  font: inherit; cursor: pointer; flex: 1 1 auto; min-height: 2.5rem;
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--rule-strong); border-radius: 8px;
+  padding: .4rem .55rem; font-size: .9rem; font-weight: 500;
+}
+.seg button:hover { border-color: var(--accent); }
+.seg button[aria-pressed="true"] {
+  background: var(--accent); color: var(--base3); border-color: var(--accent);
+}
+.cf-toggle {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  width: 100%; font: inherit; cursor: pointer; background: var(--surface);
+  border: 1px solid var(--rule-strong); border-radius: 8px;
+  padding: .7rem .85rem; color: var(--text); text-align: left;
+}
+.cf-toggle:hover { border-color: var(--accent); }
+.cf-toggle .tlabel b { display: block; font-weight: 600; color: var(--heading); }
+.cf-toggle .tlabel small { color: var(--meta); font-size: .82rem; }
+.switch { width: 2.6rem; height: 1.5rem; border-radius: 999px; background: var(--base1); position: relative; flex: none; transition: background .15s; }
+.cf-toggle[aria-pressed="true"] .switch { background: var(--accent); }
+.switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 1.1rem; height: 1.1rem; border-radius: 50%; background: var(--base3); transition: transform .15s; }
+.cf-toggle[aria-pressed="true"] .switch::after { transform: translateX(1.1rem); }
+.cf-reset {
+  font: inherit; cursor: pointer; background: transparent; color: var(--accent);
+  border: 1px solid var(--rule-strong); border-radius: 8px; padding: .6rem; font-weight: 500;
+  min-height: 2.6rem;
+}
+.cf-reset:hover { background: var(--accent-soft); border-color: var(--accent); }
+.cf-note { font-size: .82rem; color: var(--meta); line-height: 1.5; }

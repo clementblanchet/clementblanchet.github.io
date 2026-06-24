@@ -1,0 +1,5 @@
+{%- assign _mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," -%}
+{%- assign _num = include.date | date: "%m" | plus: 0 -%}
+{%- assign _idx = _num | minus: 1 -%}
+{%- assign _jour = include.date | date: "%d" | plus: 0 -%}
+{{- _jour }} {{ _mois[_idx] }} {{ include.date | date: "%Y" -}}

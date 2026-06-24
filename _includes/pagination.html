@@ -1,0 +1,27 @@
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="Pagination des articles">
+  {% if paginator.previous_page %}
+    <a class="pg-nav" href="{{ paginator.previous_page_path | relative_url }}">← Plus récents</a>
+  {% else %}
+    <span class="pg-nav" aria-disabled="true">← Plus récents</span>
+  {% endif %}
+
+  <div class="pages">
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <a href="#" aria-current="page" aria-label="Page {{ page }}">{{ page }}</a>
+      {% elsif page == 1 %}
+        <a href="{{ '/' | relative_url }}" aria-label="Page 1">1</a>
+      {% else %}
+        <a href="{{ site.paginate_path | replace: ':num', page | relative_url }}" aria-label="Page {{ page }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if paginator.next_page %}
+    <a class="pg-nav" href="{{ paginator.next_page_path | relative_url }}">Plus anciens →</a>
+  {% else %}
+    <span class="pg-nav" aria-disabled="true">Plus anciens →</span>
+  {% endif %}
+</nav>
+{% endif %}

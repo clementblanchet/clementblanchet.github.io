@@ -1,0 +1,3 @@
+{%- assign _words = include.content | strip_html | number_of_words -%}
+{%- assign _min = _words | divided_by: 200 | plus: 1 -%}
+{{- _min }} min

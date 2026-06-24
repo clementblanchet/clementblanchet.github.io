@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'fr' }}" data-size="m" data-leading="normal" data-width="narrow" data-font="lexend" data-dyslexia="off">
+{% include head.html %}
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  {% include header.html %}
+
+  <main id="contenu" tabindex="-1">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+  {% include comfort.html %}
+
+  <script src="{{ '/assets/js/confort.js' | relative_url }}"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+title: Fil de pensée
+tagline: Parfois, je réfléchis (un peu)
+description: Un carnet d'opinions concernant mon métier, l'informatique et l'usage des technologies numériques.
+lang: fr
+
+url: "https://clementblanchet.github.io"
+baseurl: ""
+
+author:
+  name: Clément Blanchet
+
+social:
+  github: "https://github.com/clementblanchet"
+  linkedin: "https://www.linkedin.com/in/cl%C3%A9ment-blanchet"
+  email: "250706493+clementblanchet@users.noreply.github.com"
+
+markdown: kramdown
+permalink: /:year/:month/:title/
+paginate: 5
+paginate_path: "/page:num/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .github
