@@ -6,8 +6,6 @@ description: >-
   Retour d'expérience honnête sur la façon dont Claude Design m'a sauvé du temps... et comment ça m'a coûté en termes d'apprentissage.
 tags: [IA, Apprentissage, Design UI, Accessibilité]
 ---
-# Design par l'IA : efficace mais vide (d'apprentissage)
-
 ## L'IU n'est pas mon fort
 
 *IA : intelligence artificielle*<br />
