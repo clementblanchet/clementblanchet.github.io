@@ -26,7 +26,8 @@ layout: default
     {% if page.tags.size > 0 %}
     <ul class="tags">
       {% for tag in page.tags %}
-      <li><a class="tag" href="{{ '/' | relative_url }}">{{ tag }}</a></li>
+      <!-- <li><a class="tag" href="{{ '/' | relative_url }}">{{ tag }}</a></li> -->
+      <li><span class="tag">{{ tag }}</span></li>
       {% endfor %}
     </ul>
     {% endif %}

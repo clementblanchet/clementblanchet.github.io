@@ -9,7 +9,8 @@
   {% if include.post.tags.size > 0 %}
   <ul class="tags">
     {% for tag in include.post.tags %}
-    <li><a class="tag" href="{{ '/' | relative_url }}">{{ tag }}</a></li>
+    <!-- <li><a class="tag" href="{{ '/' | relative_url }}">{{ tag }}</a></li> -->
+    <li><span class="tag">{{ tag }}</span></li>
     {% endfor %}
   </ul>
   {% endif %}
