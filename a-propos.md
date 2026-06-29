@@ -28,5 +28,6 @@ description: Voici quelques informations me concernant ainsi que sur ce site.
     <li>Emmanuelle Aboaf pour <a href="https://youtu.be/UZZHcfBLJAo?si=0RDGK8smR1qbF_uL">sa conférence</a> au Devoxx France 2026 sur le sujet de l'accessibilité numérique</li>
     <li><a href="https://jekyllrb.com">Jekyll</a> qui est le moteur de ce site</li>
     <li>Le projet <a href="https://fedoraproject.org/fr/">Fedora</a>, grâce auquel j'ai terminé ma crise de <a href="https://informatecdigital.com/fr/Qu%e2%80%99est-ce-que-le-%c2%ab%c2%a0distro-hopping%c2%a0%c2%bb-sous-Linux--pourquoi-et-quand-le-pratiquer%c2%a0/">distro-hopping</a></li>
+    <li><a href="https://www.anthropic.com/">Anthropic</a> et son modèle Claude Opus 8 sans lequel ce site n'aurait pas une apparence "propre" ; consultez <a href="{{ '2026/06/design-par-ia/' | relative_url }}">cet article</a> pour en savoir plus</li>
   </ul>
 </div>
